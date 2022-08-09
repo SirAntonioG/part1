@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 const History = (props) => {
   if (props.allClicks.length === 0) {
     return (
@@ -14,11 +15,12 @@ const History = (props) => {
     </div>
   )
 }
-const Button = ({ handleClick, text }) => (
-  <button onClick={handleClick}>
+const Button = ({ handleClick, text }) => {
+  console.log(handleClick, text);
+  return (<button onClick={handleClick}>
     {text}
-  </button>
-)
+  </button>)
+}
 
 const App = () => {
   const [left, setLeft] = useState(0)
