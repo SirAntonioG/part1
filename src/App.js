@@ -9,17 +9,13 @@ const Hello = ({name, age}) => {
     </div>
   );
 }
-const App = () => {
-  const name = 'Peter';
-  const age = 10;
-
+const App = (props) => {
+  const {counter} = props
   return (
-    <div>
-      <h1>Greetings</h1>
-      <Hello name="Maya" age={26 +10} />
-      <Hello name={name} age={age} />
-    </div>
-  );
+    <div>{counter}</div>
+  )
 }
+
+
 
 export default App;
